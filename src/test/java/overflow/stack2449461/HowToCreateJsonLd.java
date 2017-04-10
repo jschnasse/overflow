@@ -15,7 +15,7 @@
     import org.eclipse.rdf4j.rio.helpers.StatementCollector;
 
 
-    public class Test {
+    public class HowToCreateJsonLd {
     	@org.junit.Test
     	public void testForYourCode() {
     		String data = "{\"name\" : \"Andreas\",\"age\" : 20,\"profession\" : \"student\", \"personalWebsite\" : \"example.com\",\"@context\": \"http://schema.org/\"}";

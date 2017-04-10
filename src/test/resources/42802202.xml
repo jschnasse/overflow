@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<root>
+<extendedinfo type="html">
+    <![CDATA[<table class="ResultTable" cellpadding=2 cellspacing=1 border=0><tr class="TableHeadingLine"><th bgcolor="#b3b3b3" align="left" colspan="6"><font face="arial, verdana, trebuchet, officina, sans-serif" size="+2"><B>Testcase: Init Testreport</B></font></th></tr><tr class="TableHeadingLine"><th class="TableHeadingCell" width="120px"></th><th class="TableHeadingCell" width="120px"></th><th class="TableHeadingCell" width="80px"></th><th class="TableHeadingCell" width="345px"></th><th class="TableHeadingCell" width="345px"></th><th class="TableHeadingCell" width="70px"></th></tr>]]>
+</extendedinfo>
+<extendedinfo type="html">
+    <![CDATA[<tr><td class="DefineCell">58.675124</td><td class="DefaultCell" colspan="5"><i><font color="#008000">Set_Temperature is set to 23</font></i><br>Set_Temperature = 23</td></tr>]]>
+</extendedinfo>
+</root>

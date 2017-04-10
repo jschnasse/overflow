@@ -6,7 +6,7 @@ import java.util.List;
 
 import org.junit.Assert;
 
-    public class Test {
+    public class HowToImplementGenericTree {
 
     	class TreeNode<T> {
     		T data;

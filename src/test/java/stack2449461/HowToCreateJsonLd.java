@@ -1,4 +1,4 @@
-        package overflow.stack2449461;
+        package stack2449461;
 
     import java.io.ByteArrayInputStream;
     import java.io.InputStream;

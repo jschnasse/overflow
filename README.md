@@ -1,6 +1,6 @@
 # Stack Overflow samples
 
-Here [you will find](https://github.com/jschnasse/overflow/src/test/java) some code from my [SO answers](http://stackoverflow.com/users/1485527/jschnasse?tab=answers)
+[Find some code](https://github.com/jschnasse/overflow/tree/master/src/test/java) from my [SO answers](http://stackoverflow.com/users/1485527/jschnasse?tab=answers)
 
 [HowToCreateJsonLd](src/test/java/stack43219064)
 
@@ -8,7 +8,7 @@ Here [you will find](https://github.com/jschnasse/overflow/src/test/java) some c
 
 [HowToLoadZippedRdfToRdf4jRepository](src/test/java/stack42910063)
 
-[HowToParseCDATA](src/test/java/stack4202202)
+[HowToParseCDATA](src/test/java/stack42802202)
 
 [HowToParseCDATAWithStax](src/test/java/stack41365068)
 

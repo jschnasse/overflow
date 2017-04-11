@@ -1,0 +1,13 @@
+<tincan xmlns="http://projecttincan.com/tincan.xsd">
+  <activities>
+    <activity id="TestActivity" type="course">
+      <name lang="und">MyCourse</name>
+      <description lang="und"/>
+      <launch lang="und">start.html</launch>
+    </activity>
+    <activity id="p001" type="objective">
+      <name lang="und">First Page</name>
+      <description lang="und">First Page</description>
+    </activity>
+  </activities>
+</tincan>

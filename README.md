@@ -11,3 +11,5 @@ Here [you will find](https://github.com/jschnasse/overflow/src/test/java) some c
 [HowToParseCDATA](src/test/java/stack4202202)
 
 [HowToParseCDATAWithStax](src/test/java/stack41365068)
+
+[HowToValidateXml](src/test/java/stack43324079)

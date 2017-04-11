@@ -13,3 +13,5 @@
 [HowToParseCDATAWithStax](src/test/java/stack41365068)
 
 [HowToValidateXml](src/test/java/stack43324079)
+
+[HowToDemonstrateDeadlock](src/test/java/stack43323164)

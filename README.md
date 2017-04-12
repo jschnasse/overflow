@@ -15,3 +15,5 @@
 [HowToValidateXml](src/test/java/stack43324079)
 
 [HowToDemonstrateDeadlock](src/test/java/stack43323164)
+
+[HowToConvertJsonStringToMap](src/test/java/stack43366958)

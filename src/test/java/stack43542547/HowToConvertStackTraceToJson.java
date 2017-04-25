@@ -16,10 +16,8 @@
     	}
 
     	private String asJson(Object obj) throws Exception {
-    	
     			StringWriter w = new StringWriter();
     			new ObjectMapper().configure(SerializationFeature.INDENT_OUTPUT, true).writeValue(w, obj);
     			String result = w.toString();
     			return result;	}
-
     }

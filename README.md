@@ -19,3 +19,5 @@
 [HowToConvertJsonStringToMap](src/test/java/stack43366958)
 
 [HowToConvertStackTraceToJson](src/test/java/stack43542547)
+
+[HowToConvertRdfToJson](src/test/java/stack43638342)

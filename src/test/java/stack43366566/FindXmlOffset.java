@@ -7,10 +7,10 @@
     import org.antlr.v4.runtime.CommonTokenStream;
     import org.antlr.v4.runtime.tree.ParseTreeWalker;
 
-    import gen.XMLLexer;
-    import gen.XMLParser;
-    import gen.XMLParser.DocumentContext;
-    import gen.XMLParserBaseListener;
+    import stack43366566.gen.XMLLexer;
+    import stack43366566.gen.XMLParser;
+    import stack43366566.gen.XMLParser.DocumentContext;
+    import stack43366566.gen.XMLParserBaseListener;
 
     public class FindXmlOffset {
     	

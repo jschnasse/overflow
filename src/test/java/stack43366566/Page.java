@@ -21,4 +21,5 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 class Page {
 	public Page(){};
 	public String title;
+	public String offset;
 }

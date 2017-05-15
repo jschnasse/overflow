@@ -32,7 +32,7 @@ public class ReadObjectsFromCharPosition<T> {
 		this.typeOfT = typeParameterClass;
 	}
 
-	private List<T> extractObjects(String filename, List<Integer>offsets) {
+	private List<T> extractObjects(String filename, List<Integer> offsets) {
 		List<T> objects = new ArrayList<>();
 		for (Integer offset : offsets) {
 			T object = readPage(offset, filename);
@@ -61,17 +61,27 @@ public class ReadObjectsFromCharPosition<T> {
 		}
 	}
 
+	/**
+	 * Run with -xX6GB
+	 * @param args
+	 */
 	public static void main(String[] args) {
-		String filename = "/home/jan/dewiki-20170501-pages-articles-multistream.xml";
+		/**
+		 * Download wikidata dump from
+		 * https://dumps.wikimedia.org/dewiki/latest/ . Currently
+		 * dewiki-20170501-pages-articles-multistream.xml is ~5GB compressed and
+		 * ~17GB uncompressed.
+		 */
+		String filename = "/tmp/dewiki-20170501-pages-articles-multistream.xml";
 		String elementName = "page";
 
 		List<Integer> offsets = new FindXmlOffset().createOffsets(filename, elementName);
-		System.out.println("Found "+offsets.size()+" pages");
+		System.out.println("Found " + offsets.size() + " pages");
 		System.out.println(objectToString(offsets));
-		
+
 		ReadObjectsFromCharPosition<Page> c = new ReadObjectsFromCharPosition<>(Page.class);
 		List<Page> objects = c.extractObjects(filename, offsets);
-		System.out.println("Found "+objects.size()+" pages");
+		System.out.println("Found " + objects.size() + " pages");
 		System.out.println(objectToString(objects));
 	}
 

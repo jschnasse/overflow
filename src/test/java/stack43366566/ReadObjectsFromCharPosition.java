@@ -63,6 +63,7 @@ public class ReadObjectsFromCharPosition<T> {
 
 	/**
 	 * Run with -xX6GB
+	 * 
 	 * @param args
 	 */
 	public static void main(String[] args) {
@@ -80,7 +81,9 @@ public class ReadObjectsFromCharPosition<T> {
 		System.out.println(objectToString(offsets));
 
 		ReadObjectsFromCharPosition<Page> c = new ReadObjectsFromCharPosition<>(Page.class);
-		List<Page> objects = c.extractObjects(filename, offsets);
+		/* Only print the first 50 objects for test purposes
+		 */
+		List<Page> objects = c.extractObjects(filename, offsets.subList(0, 50));
 		System.out.println("Found " + objects.size() + " pages");
 		System.out.println(objectToString(objects));
 	}

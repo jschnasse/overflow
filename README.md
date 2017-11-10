@@ -27,3 +27,6 @@
 [HowToConvertEmbeddedJsonStringToMap](src/test/java/stack43844461)
 
 [HowToReadACsvFile](src/test/java/stack47220687)
+
+[HowToCountWordOccurrences](src/test/java/stack44164695)
+

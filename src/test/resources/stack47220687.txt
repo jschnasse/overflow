@@ -1,0 +1,7 @@
+Gamename: Gamescore: Minutestoplay
+Gameone : 120 : 1428 
+Gametwo : 20 : 10 
+Gamethree : 90 : 800 
+Gamefour : 190 : 2001 
+Gamefive : 25 : 80 
+Gamesix : 55 : 862

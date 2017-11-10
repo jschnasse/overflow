@@ -23,3 +23,7 @@
 [HowToConvertRdfToJson](src/test/java/stack43638342)
 
 [HowToFindXmlOffsetsUsingAntlr](src/test/java/stack43366566)
+
+[HowToConvertEmbeddedJsonStringToMap](src/test/java/stack43844461)
+
+[HowToReadACsvFile](src/test/java/stack47220687)

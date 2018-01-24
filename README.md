@@ -30,3 +30,5 @@
 
 [HowToCountWordOccurrences](src/test/java/stack44164695)
 
+[HowToReadXmlToAPojoIn2017](src/test/java/stack47711679)
+

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Anime id="1">
+        <name>Bleach</name>
+        <altname>Burichi</altname>
+        <seasons>16</seasons>
+        <episodes>366</episodes>
+        <status>Finished</status>
+        <sound>Dubbed</sound>
+        <have>All</have>
+        <left>-/-</left>
+        <plot>Ichigo gets grim reaper powers, fights reapers, hollows and everything in between</plot>
+        <connect>Bleach movies</connect>
+        <image>images/bleach.jpg</image>
+</Anime>

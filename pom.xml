@@ -35,7 +35,7 @@
 					</descriptorRefs>
 				</configuration>
 			</plugin>
-			
+
 		</plugins>
 	</build>
 	<dependencies>
@@ -87,6 +87,11 @@
 			<groupId>net.sf.supercsv</groupId>
 			<artifactId>super-csv</artifactId>
 			<version>2.4.0</version>
+		</dependency>
+		<dependency>
+			<groupId>xerces</groupId>
+			<artifactId>xercesImpl</artifactId>
+			<version>2.11.0</version>
 		</dependency>
 	</dependencies>
 </project>

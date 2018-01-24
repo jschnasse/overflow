@@ -15,7 +15,12 @@
  ******************************************************************************/
 package stack42910063;
 
+import java.io.IOException;
 import java.io.InputStream;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLConnection;
+
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Resource;
 import org.eclipse.rdf4j.model.Value;
@@ -46,6 +51,7 @@ public class HowToLoadZippedRdfToRdf4jRepository {
 						repo.getConnection());) {
 			RepositoryConnectionListenerAdapter myListener = new RepositoryConnectionListenerAdapter() {
 				private long count = 0;
+
 				@Override
 				public void add(RepositoryConnection arg0, Resource arg1, IRI arg2, Value arg3, Resource... arg4) {
 					count++;
@@ -76,12 +82,42 @@ public class HowToLoadZippedRdfToRdf4jRepository {
 		}
 	}
 
+	@Test
+	public void variant3() throws MalformedURLException, IOException {
+		Repository repo = new SailRepository(new MemoryStore());
+		repo.initialize();
+		IRI context = repo.getValueFactory().createIRI("info/mycontext:context1");
+		RDFFormat format = RDFFormat.NTRIPLES;
+		System.out.println("Load zip file of format " + format);
+		try (InputStream in = new URL(
+						"https://tools.wmflabs.org/wikidata-exports/rdf/exports/20160801/wikidata-terms.nt.gz")
+										.openConnection().getInputStream();
+						NotifyingRepositoryConnectionWrapper con = new NotifyingRepositoryConnectionWrapper(repo,
+										repo.getConnection());) {
+			RepositoryConnectionListenerAdapter myListener = new RepositoryConnectionListenerAdapter() {
+				private long count = 0;
+				@Override
+				public void add(RepositoryConnection arg0, Resource arg1, IRI arg2, Value arg3, Resource... arg4) {
+					count++;
+					if (count % 100000 == 0)
+						System.out.println("Add statement number " + count + "\n" + arg1 + " " + arg2 + " " + arg3);
+				}
+			};
+			con.addRepositoryConnectionListener(myListener);
+			con.add(in, "", format,context);
+		} catch (Exception e) {
+			throw new RuntimeException(e);
+		}
+	}
+
 	class MyRdfInserter extends AbstractRDFHandler {
 		RDFInserter rdfInserter;
 		int count = 0;
+
 		public MyRdfInserter(RepositoryConnection con) {
 			rdfInserter = new RDFInserter(con);
 		}
+
 		@Override
 		public void handleStatement(Statement st) {
 			count++;

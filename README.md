@@ -32,3 +32,5 @@
 
 [HowToReadXmlToAPojoIn2017](src/test/java/stack47711679)
 
+[HowToReadDataFromUrl](src/test/java/stack48618849)
+

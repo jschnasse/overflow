@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wddxPacket version="1.0">
+   <header />
+   <data>
+      <string>
+         <char code="0d" />
+         <char code="0a" />
+         Provider: HERO - 2.xx
+         <char code="0d" />
+         <char code="0a" />
+         <char code="0d" />
+         <char code="0a" />
+         <char code="0d" />
+         <char code="0a" />
+         DBvendor=EPA
+         <char code="0d" />
+         <char code="0a" />
+         Text-encoding=UTF-8
+         <char code="0d" />
+         <char code="0a" />
+         <char code="0d" />
+         <char code="0a" />
+         TY  - RPRT
+         <char code="0d" />
+         <char code="0a" />
+         LB  - 94742
+         <char code="0d" />
+         <char code="0a" />
+         AU  - IARC,
+         <char code="0d" />
+         <char code="0a" />
+         LU  - International Agency for Research on Cancer
+         <char code="0d" />
+         <char code="0a" />
+         PY  - 1985
+         <char code="0d" />
+         <char code="0a" />
+         TY  - JOUR
+         <char code="0d" />
+         <char code="0a" />
+         LB  - 94743
+         <char code="0d" />
+         <char code="0a" />
+         AU  - Shamilov, T. A.
+         <char code="0d" />
+         <char code="0a" />
+         AU  -  Abasov, D. M.
+         <char code="0d" />
+         <char code="0a" />
+         PY  - 1973
+         <char code="0d" />
+         <char code="0a" />
+         J2  - Med Tr Prom Ekol
+         <char code="0d" />
+         <char code="0a" />
+         T2  - Meditsina Truda i Promyshlennaya Ekologiya
+         <char code="0d" />
+         <char code="0a" />
+         JF  - Meditsina Truda i Promyshlennaya Ekologiya
+         <char code="0d" />
+         <char code="0a" />
+         SP  - 12-15
+         <char code="0d" />
+         <char code="0a" />
+         SN  - ISSN 1026-9428
+         <char code="0d" />
+         <char code="0a" />
+         TI  - Effect of allyl chloride on animals under experimental conditions
+         <char code="0d" />
+         <char code="0a" />
+         VL  - 8
+         <char code="0d" />
+         <char code="0a" />
+         ER  -
+         <char code="0d" />
+         <char code="0a" />
+         <char code="0d" />
+         <char code="0a" />
+         TY  - JOUR
+         <char code="0d" />
+         <char code="0a" />
+      </string>
+   </data>
+</wddxPacket>

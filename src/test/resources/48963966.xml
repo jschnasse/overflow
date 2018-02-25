@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schedule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	generated_at="2018-02-23T16:55:45+00:00" xmlns="http://schemas.thesite.com/jobsapi/v1/myjob">
+	<job_event id="sr:task:12004724" scheduled="2018-02-23T17:00:00+00:00"
+		start_time_tbd="false" status="not_started" />
+	<job_event id="sr:task:12004725" scheduled="2018-02-25T17:00:00+00:00"
+		start_time_tbd="false" status="not_started" />
+</schedule>
+		

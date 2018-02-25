@@ -16,8 +16,16 @@
 package stack42802202;
 
 import javax.xml.stream.XMLStreamReader;
+import javax.xml.xpath.XPath;
+import javax.xml.xpath.XPathConstants;
+import javax.xml.xpath.XPathExpression;
+import javax.xml.xpath.XPathFactory;
+
 import org.junit.Test;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import org.w3c.dom.Document;
@@ -76,6 +84,66 @@ public class HowToParseCDATA {
 					throw new RuntimeException(e);
 				}
 			}
+		}
+	}
+
+	@Test
+	public void getText() {
+		String yourSampleFile = "44167076.xml";
+		StringBuilder result = new StringBuilder();
+		XMLStreamReader r = null;
+		try (InputStream in = Thread.currentThread().getContextClassLoader().getResourceAsStream(yourSampleFile)) {
+			XMLInputFactory factory = XMLInputFactory.newInstance();
+			r = factory.createXMLStreamReader(in);
+			while (r.hasNext()) {
+				switch (r.getEventType()) {
+				case XMLStreamConstants.CHARACTERS:
+					result.append(r.getText());
+					break;
+				default:
+					break;
+				}
+				r.next();
+			}
+		} catch (Exception e) {
+			throw new RuntimeException(e);
+		} finally {
+			if (r != null) {
+				try {
+					r.close();
+				} catch (Exception e) {
+					throw new RuntimeException(e);
+				}
+			}
+		}
+		System.out.println(result.toString().replaceAll("(?m)^[ \t]*\r?\n", ""));
+	}
+
+	@Test
+	public void getText2() {
+		String yourSampleFile = "44167076.xml";
+		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+		try (InputStream in = Thread.currentThread().getContextClassLoader().getResourceAsStream(yourSampleFile)) {
+			DocumentBuilder db = dbf.newDocumentBuilder();
+			Document doc = db.parse(in);
+			XPathFactory xPathFactory = XPathFactory.newInstance();
+			XPath xpath = xPathFactory.newXPath();
+			XPathExpression expr = xpath.compile("//string/text()");
+			Object eval = expr.evaluate(doc, XPathConstants.NODESET);
+			List<String> textValues = new ArrayList<String>();
+			if (eval != null && eval instanceof NodeList) {
+				NodeList list = (NodeList) eval;
+				for (int i = 0; i < list.getLength(); i++) {
+					Node node = list.item(i);
+					String text = node.getNodeValue().trim();
+					if (!text.isEmpty()) {
+						System.out.println(text);
+						textValues.add(text);
+					}
+				}
+			}
+		} catch (Exception e) {
+			throw new RuntimeException(e);
 		}
 	}
 

@@ -41,6 +41,17 @@
     			throw new RuntimeException(e);
     		}
     	}
+    	
+    	@org.junit.Test
+    	public void jsonFileToRDF() {
+    		
+    		try (InputStream in = Thread.currentThread().getContextClassLoader().getSystemResourceAsStream("43219064.json")) {
+    			String dataAsRdf = readRdfToString(in, RDFFormat.JSONLD, RDFFormat.NTRIPLES, "");
+    			System.out.println(dataAsRdf);
+    		} catch (Exception e) {
+    			throw new RuntimeException(e);
+    		}
+    	}
 
     	/**
     	 * @param in

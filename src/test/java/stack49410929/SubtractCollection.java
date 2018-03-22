@@ -28,11 +28,9 @@ public class SubtractCollection {
 
 	@Test
 	public void subtract1() {
-		List<Integer> a =new ArrayList<>(Arrays.asList(1, 2, 2));
+		List<Integer> a = new ArrayList<>(Arrays.asList(1, 2, 2));
 		List<Integer> b = Arrays.asList(2, 3, 4);
-		b.forEach(i -> {
-			a.remove(i);
-		});
+		b.forEach(i -> a.remove(i));
 		System.out.println(a);
 	}
 

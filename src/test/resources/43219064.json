@@ -1,0 +1,888 @@
+{
+  "publicationStatus" : "http://hbz-nrw.de/regal#original",
+  "creator" : [ "http://api.localhost/adhoc/author/test", "http://api.localhost/adhoc/author/tost", "http://api.localhost/adhoc/author/aname", "http://api.localhost/adhoc/author/test", "http://api.localhost/adhoc/author/tost" ],
+  "ddc" : [ "http://dewey.info/class/333/7/" ],
+  "contributorOrder" : [ "http://api.localhost/adhoc/author/test|http://api.localhost/adhoc/author/tost|aname|http://api.localhost/adhoc/author/test|http://api.localhost/adhoc/author/tost|http://api.localhost/adhoc/corporateBody/eron|http://api.localhost/adhoc/corporateBody/eron" ],
+  "collectionOne" : [ "http://d-nb.info/gnd/10140857-2" ],
+  "subject" : [ "http://api.localhost/adhoc/subject/hallo", "http://api.localhost/adhoc/subject/hallo" ],
+  "language" : "http://id.loc.gov/vocabulary/iso639-2/eng",
+  "medium" : "http://purl.org/lobid/lv#fulltextOnline",
+  "title" : "test",
+  "professionalGroup" : [ "http://skos.um.es/unescothes/C02286" ],
+  "contributorName" : [ "http://api.localhost/adhoc/corporateBody/eron", "http://api.localhost/adhoc/corporateBody/eron" ],
+  "rdftype" : "http://purl.org/ontology/bibo/Article",
+  "institution" : [ "http://d-nb.info/gnd/7854751-9" ],
+  "contributor" : [ "http://api.localhost/adhoc/corporateBody/eron", "http://api.localhost/adhoc/corporateBody/eron" ],
+  "containedIn" : [ "http://lobid.org/resources/HT012297156#!" ],
+  "publicationYear" : "2018",
+  "@id" : "frl:105",
+  "isPrimaryTopicOf" : {
+    "primaryTopic" : "frl:105",
+    "@id" : "http://localhost/resource/frl:105/edit"
+  },
+  "subjectName" : [ "http://api.localhost/adhoc/subject/hallo", "http://api.localhost/adhoc/subject/hallo" ],
+  "@context" : {
+    "ConferenceOrEvent" : {
+      "@type" : "@id",
+      "@id" : "http://d-nb.info/standards/elementset/gnd#ConferenceOrEvent",
+      "@container" : "@set"
+    },
+    "CorporateBody" : {
+      "@type" : "@id",
+      "@id" : "http://d-nb.info/standards/elementset/gnd#CorporateBody",
+      "@container" : "@set"
+    },
+    "DifferentiatedPerson" : {
+      "@type" : "@id",
+      "@id" : "http://d-nb.info/standards/elementset/gnd#DifferentiatedPerson",
+      "@container" : "@set"
+    },
+    "Family" : {
+      "@type" : "@id",
+      "@id" : "http://d-nb.info/standards/elementset/gnd#Family",
+      "@container" : "@set"
+    },
+    "Game" : {
+      "@type" : "@id",
+      "@id" : "http://purl.org/library/Game",
+      "@container" : "@set"
+    },
+    "Isbn" : {
+      "@id" : "http://purl.org/ontology/bibo/isbn",
+      "@container" : "@set"
+    },
+    "Item" : {
+      "@type" : "@id",
+      "@id" : "http://purl.org/vocab/frbr/core#Item",
+      "@container" : "@set"
+    },
+    "MultiVolumeWorkRelation" : {
+      "@type" : "@id",
+      "@id" : "http://purl.org/lobid/lv#MultiVolumeWorkRelation",
+      "@container" : "@set"
+    },
+    "OfficialPublication" : {
+      "@type" : "@id",
+      "@id" : "http://purl.org/lobid/lv#OfficialPublication",
+      "@container" : "@set"
+    },
+    "P1004" : {
+      "@id" : "http://iflastandards.info/ns/isbd/elements/P1004"
+    },
+    "P1006" : {
+      "@id" : "http://iflastandards.info/ns/isbd/elements/P1006"
+    },
+    "P1016" : {
+      "@id" : "http://iflastandards.info/ns/isbd/elements/P1016"
+    },
+    "P1053" : {
+      "@id" : "http://iflastandards.info/ns/isbd/elements/P1053"
+    },
+    "P60489" : {
+      "@id" : "http://rdaregistry.info/Elements/u/P60489",
+      "@container" : "@set"
+    },
+    "Person" : {
+      "@type" : "@id",
+      "@id" : "http://d-nb.info/standards/elementset/gnd#Person",
+      "@container" : "@set"
+    },
+    "PlaceOrGeographicName" : {
+      "@type" : "@id",
+      "@id" : "http://d-nb.info/standards/elementset/gnd#PlaceOrGeographicName",
+      "@container" : "@set"
+    },
+    "ReferenceSource" : {
+      "@type" : "@id",
+      "@id" : "http://purl.org/ontology/bibo/ReferenceSource",
+      "@container" : "@set"
+    },
+    "Report" : {
+      "@type" : "@id",
+      "@id" : "http://purl.org/ontology/bibo/Report",
+      "@container" : "@set"
+    },
+    "Schoolbook" : {
+      "@type" : "@id",
+      "@id" : "http://purl.org/lobid/lv#Schoolbook",
+      "@container" : "@set"
+    },
+    "SeriesRelation" : {
+      "@type" : "@id",
+      "@id" : "http://purl.org/lobid/lv#SeriesRelation",
+      "@container" : "@set"
+    },
+    "SubjectHeading" : {
+      "@type" : "@id",
+      "@id" : "http://d-nb.info/standards/elementset/gnd#SubjectHeading",
+      "@container" : "@set"
+    },
+    "T1008" : {
+      "@id" : "http://iflastandards.info/ns/isbd/terms/mediatype/T1008"
+    },
+    "Work" : {
+      "@type" : "@id",
+      "@id" : "http://d-nb.info/standards/elementset/gnd#Work",
+      "@container" : "@set"
+    },
+    "abstractText" : {
+      "@id" : "http://purl.org/dc/terms/abstract",
+      "@container" : "@set"
+    },
+    "accessScheme" : {
+      "@id" : "http://hbz-nrw.de/regal#accessScheme"
+    },
+    "additionalMaterial" : {
+      "@type" : "@id",
+      "@id" : "info:regal/zettel/additionalMaterial",
+      "@container" : "@list"
+    },
+    "affiliation" : {
+      "@id" : "http://www.w3.org/2006/vcard/ns#adr",
+      "@container" : "@list"
+    },
+    "affiliationIndex" : {
+      "@id" : "http://hbz-nrw.de/regal#affiliationIndex"
+    },
+    "agent" : {
+      "@type" : "@id",
+      "@id" : "http://id.loc.gov/ontologies/bibframe/agent"
+    },
+    "agrovoc" : {
+      "@type" : "@id",
+      "@id" : "http://hbz-nrw.de/regal#agrovoc",
+      "@container" : "@set"
+    },
+    "altLabel" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#altLabel",
+      "@container" : "@set"
+    },
+    "alternative" : {
+      "@id" : "http://purl.org/dc/terms/alternative",
+      "@container" : "@set"
+    },
+    "articleNumber" : {
+      "@id" : "http://hbz-nrw.de/regal#articleNumber"
+    },
+    "associatedDataset" : {
+      "@id" : "http://hbz-nrw.de/regal#associatedDataset",
+      "@container" : "@set"
+    },
+    "associatedPublication" : {
+      "@id" : "http://hbz-nrw.de/regal#associatedPublication",
+      "@container" : "@set"
+    },
+    "bibliographicCitation" : {
+      "@id" : "http://purl.org/dc/terms/bibliographicCitation"
+    },
+    "bibo:doi" : {
+      "@id" : "http://purl.org/ontology/bibo/doi",
+      "@container" : "@set"
+    },
+    "callNumber" : {
+      "@id" : "http://purl.org/ontology/daia/label",
+      "@container" : "@set"
+    },
+    "catalogLink" : {
+      "@type" : "@id",
+      "@id" : "http://hbz-nrw.de/regal#catalogLink"
+    },
+    "checksum" : {
+      "@type" : "@id",
+      "@id" : "http://downlode.org/Code/RDF/File_Properties/schema#checksum"
+    },
+    "collectedBy" : {
+      "@type" : "@id",
+      "@id" : "http://purl.org/ontology/holding#collectedBy",
+      "@container" : "@set"
+    },
+    "collectionOne" : {
+      "@type" : "@id",
+      "@id" : "info:regal/zettel/collectionOne"
+    },
+    "componentList" : {
+      "@type" : "@id",
+      "@id" : "http://www.loc.gov/mads/rdf/v1#componentList",
+      "@container" : "@list"
+    },
+    "congressDuration" : {
+      "@id" : "http://hbz-nrw.de/regal#congressDuration",
+      "@container" : "@list"
+    },
+    "congressHost" : {
+      "@type" : "@id",
+      "@id" : "http://hbz-nrw.de/regal#congressHost",
+      "@container" : "@list"
+    },
+    "congressLocation" : {
+      "@id" : "http://hbz-nrw.de/regal#congressLocation"
+    },
+    "congressNumber" : {
+      "@id" : "http://hbz-nrw.de/regal#congressNumber"
+    },
+    "congressShortTitle" : {
+      "@id" : "http://hbz-nrw.de/regal#congressShortTitle"
+    },
+    "congressTitle" : {
+      "@id" : "http://hbz-nrw.de/regal#congressTitle"
+    },
+    "containedIn" : {
+      "@type" : "@id",
+      "@id" : "http://purl.org/lobid/lv#containedIn",
+      "@container" : "@set"
+    },
+    "contentType" : {
+      "@id" : "http://hbz-nrw.de/regal#contentType"
+    },
+    "contributingCorporateBodyLabel" : {
+      "@id" : "http://purl.org/lobid/lv#nameOfContributingCorporateBody",
+      "@container" : "@set"
+    },
+    "contribution" : {
+      "@type" : "@id",
+      "@id" : "http://id.loc.gov/ontologies/bibframe/contribution",
+      "@container" : "@list"
+    },
+    "contributor" : {
+      "@type" : "@id",
+      "@id" : "http://purl.org/dc/terms/contributor",
+      "@container" : "@list"
+    },
+    "contributorName" : {
+      "@id" : "http://purl.org/dc/elements/1.1/contributor",
+      "@container" : "@set"
+    },
+    "contributorOrder" : {
+      "@id" : "http://purl.org/lobid/lv#contributorOrder",
+      "@container" : "@list"
+    },
+    "corporateBodyForTitle" : {
+      "@id" : "http://rdaregistry.info/Elements/u/P60327",
+      "@container" : "@set"
+    },
+    "coverage" : {
+      "@id" : "http://purl.org/dc/elements/1.1/coverage",
+      "@container" : "@set"
+    },
+    "created" : {
+      "@id" : "http://purl.org/dc/terms/created",
+      "@container" : "@set"
+    },
+    "createdBy" : {
+      "@id" : "http://hbz-nrw.de/regal#createdBy"
+    },
+    "creator" : {
+      "@type" : "@id",
+      "@id" : "http://purl.org/dc/terms/creator",
+      "@container" : "@list"
+    },
+    "creatorName" : {
+      "@id" : "http://purl.org/dc/elements/1.1/creator",
+      "@container" : "@list"
+    },
+    "dataOrigin" : {
+      "@type" : "@id",
+      "@id" : "http://hbz-nrw.de/regal#dataOrigin",
+      "@container" : "@set"
+    },
+    "dateOfBirth" : {
+      "@id" : "http://d-nb.info/standards/elementset/gnd#dateOfBirth",
+      "@container" : "@set"
+    },
+    "dateOfDeath" : {
+      "@id" : "http://d-nb.info/standards/elementset/gnd#dateOfDeath",
+      "@container" : "@set"
+    },
+    "ddc" : {
+      "@type" : "@id",
+      "@id" : "http://hbz-nrw.de/regal#ddc",
+      "@container" : "@set"
+    },
+    "describedby" : {
+      "@type" : "@id",
+      "@id" : "http://www.w3.org/2007/05/powder-s#describedby"
+    },
+    "describes" : {
+      "@type" : "@id",
+      "@id" : "http://www.openarchives.org/ore/terms/describes"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/terms/description",
+      "@container" : "@set"
+    },
+    "doi" : {
+      "@id" : "http://hbz-nrw.de/regal#doi"
+    },
+    "edition" : {
+      "@id" : "http://purl.org/ontology/bibo/edition",
+      "@container" : "@set"
+    },
+    "editor" : {
+      "@type" : "@id",
+      "@id" : "http://purl.org/ontology/bibo/editor",
+      "@container" : "@set"
+    },
+    "eissn" : {
+      "@id" : "http://purl.org/ontology/bibo/eissn"
+    },
+    "embargoTime" : {
+      "@id" : "http://hbz-nrw.de/regal#embargoTime"
+    },
+    "endDate" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#gYear",
+      "@id" : "http://schema.org/endDate",
+      "@container" : "@set"
+    },
+    "exemplar" : {
+      "@id" : "http://purl.org/vocab/frbr/core#exemplar"
+    },
+    "exemplarOf" : {
+      "@type" : "@id",
+      "@id" : "http://purl.org/vocab/frbr/core#exemplarOf",
+      "@container" : "@set"
+    },
+    "extent" : {
+      "@id" : "http://id.loc.gov/ontologies/bibframe/extent"
+    },
+    "externalParent" : {
+      "@type" : "@id",
+      "@id" : "http://hbz-nrw.de/regal#isPartOf"
+    },
+    "format" : {
+      "@id" : "http://purl.org/dc/terms/format"
+    },
+    "frequency" : {
+      "@id" : "http://rdvocab.info/Elements/frequency",
+      "@container" : "@set"
+    },
+    "fulltextOnline" : {
+      "@type" : "@id",
+      "@id" : "http://purl.org/lobid/lv#fulltextOnline",
+      "@container" : "@set"
+    },
+    "fulltextVersion" : {
+      "@type" : "@id",
+      "@id" : "info:regal/zettel/fulltextVersion",
+      "@container" : "@list"
+    },
+    "funding" : {
+      "@id" : "http://hbz-nrw.de/regal#funding",
+      "@container" : "@list"
+    },
+    "fundingProgram" : {
+      "@id" : "http://hbz-nrw.de/regal#fundingProgram",
+      "@container" : "@list"
+    },
+    "generator" : {
+      "@type" : "@id",
+      "@id" : "http://downlode.org/Code/RDF/File_Properties/schema#generator"
+    },
+    "gnd:publication" : {
+      "@id" : "http://d-nb.info/standards/elementset/gnd#publication",
+      "@container" : "@set"
+    },
+    "hasData" : {
+      "@id" : "http://hbz-nrw.de/regal#hasData"
+    },
+    "hasFormat" : {
+      "@type" : "@id",
+      "@id" : "http://purl.org/dc/terms/hasFormat",
+      "@container" : "@set"
+    },
+    "hasItem" : {
+      "@type" : "@id",
+      "@id" : "http://id.loc.gov/ontologies/bibframe/hasItem",
+      "@container" : "@set"
+    },
+    "hasPart" : {
+      "@type" : "@id",
+      "@id" : "http://purl.org/dc/terms/hasPart",
+      "@container" : "@set"
+    },
+    "hasSuperordinate" : {
+      "@type" : "@id",
+      "@id" : "http://purl.org/lobid/lv#hasSuperordinate",
+      "@container" : "@set"
+    },
+    "hasSupplement" : {
+      "@type" : "@id",
+      "@id" : "http://rdaregistry.info/Elements/u/P60281",
+      "@container" : "@set"
+    },
+    "hasTransformer" : {
+      "@id" : "http://hbz-nrw.de/regal#hasTransformer"
+    },
+    "hasURN" : {
+      "@id" : "http://geni-orca.renci.org/owl/topology.owl#hasURN"
+    },
+    "hasVersion" : {
+      "@id" : "http://purl.org/dc/terms/hasVersion",
+      "@container" : "@set"
+    },
+    "hbzId" : {
+      "@id" : "http://purl.org/lobid/lv#hbzID"
+    },
+    "heldBy" : {
+      "@type" : "@id",
+      "@id" : "http://id.loc.gov/ontologies/bibframe/heldBy"
+    },
+    "id" : "@id",
+    "importedFrom" : {
+      "@id" : "http://hbz-nrw.de/regal#importedFrom"
+    },
+    "inCollection" : {
+      "@type" : "@id",
+      "@id" : "http://purl.org/lobid/lv#inCollection",
+      "@container" : "@set"
+    },
+    "inDataset" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#inDataset"
+    },
+    "inSeries" : {
+      "@type" : "@id",
+      "@id" : "http://purl.org/lobid/lv#inSeries",
+      "@container" : "@set"
+    },
+    "institution" : {
+      "@type" : "@id",
+      "@id" : "http://dbpedia.org/ontology/institution"
+    },
+    "isAggregatedBy" : {
+      "@type" : "@id",
+      "@id" : "http://www.openarchives.org/ore/terms/isAggregatedBy"
+    },
+    "isDescribedBy" : {
+      "@type" : "@id",
+      "@id" : "http://www.openarchives.org/ore/terms/isDescribedBy"
+    },
+    "isLike" : {
+      "@type" : "@id",
+      "@id" : "http://www.umbel.org/specifications/vocabulary#isLike"
+    },
+    "isPartOfName" : {
+      "@id" : "http://purl.org/dc/elements/1.1/isPartOf"
+    },
+    "isPrimaryTopicOf" : {
+      "@type" : "@id",
+      "@id" : "http://xmlns.com/foaf/0.1/isPrimaryTopicOf"
+    },
+    "isSupplementTo" : {
+      "@id" : "http://rdaregistry.info/Elements/u/P60259",
+      "@container" : "@set"
+    },
+    "isbn" : {
+      "@id" : "http://purl.org/ontology/bibo/isbn10",
+      "@container" : "@set"
+    },
+    "isbn13" : {
+      "@id" : "http://purl.org/ontology/bibo/isbn13",
+      "@container" : "@set"
+    },
+    "ismn" : {
+      "@id" : "http://purl.org/ontology/mo/ismn",
+      "@container" : "@set"
+    },
+    "issn" : {
+      "@id" : "http://purl.org/ontology/bibo/issn",
+      "@container" : "@set"
+    },
+    "issue" : {
+      "@id" : "http://hbz-nrw.de/regal#issue"
+    },
+    "issued" : {
+      "@id" : "http://purl.org/dc/terms/issued"
+    },
+    "itemID" : {
+      "@id" : "http://www.openarchives.org/OAI/2.0/itemID"
+    },
+    "itemOf" : {
+      "@type" : "@id",
+      "@id" : "http://id.loc.gov/ontologies/bibframe/itemOf"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label",
+      "@container" : "@set"
+    },
+    "language" : {
+      "@type" : "@id",
+      "@id" : "http://purl.org/dc/terms/language",
+      "@container" : "@set"
+    },
+    "lastModifiedBy" : {
+      "@id" : "http://hbz-nrw.de/regal#lastModifiedBy"
+    },
+    "lccn" : {
+      "@id" : "http://purl.org/ontology/bibo/lccn"
+    },
+    "legacyId" : {
+      "@id" : "http://hbz-nrw.de/regal#legacyId"
+    },
+    "license" : {
+      "@type" : "@id",
+      "@id" : "http://hbz-nrw.de/regal#license"
+    },
+    "location" : {
+      "@id" : "http://schema.org/location",
+      "@container" : "@set"
+    },
+    "longitudeAndLatitude" : {
+      "@id" : "http://rdvocab.info/Elements/longitudeAndLatitude",
+      "@container" : "@set"
+    },
+    "lv:isPartOf" : {
+      "@type" : "@id",
+      "@id" : "http://purl.org/lobid/lv#isPartOf",
+      "@container" : "@set"
+    },
+    "lv:volumeIn" : {
+      "@type" : "@id",
+      "@id" : "http://purl.org/lobid/lv#volumeIn",
+      "@container" : "@set"
+    },
+    "medium" : {
+      "@type" : "@id",
+      "@id" : "http://purl.org/dc/terms/medium",
+      "@container" : "@set"
+    },
+    "modified" : {
+      "@id" : "http://purl.org/dc/terms/modified",
+      "@container" : "@set"
+    },
+    "multiVolumeWork" : {
+      "@type" : "@id",
+      "@id" : "http://purl.org/lobid/lv#multiVolumeWork",
+      "@container" : "@set"
+    },
+    "name" : {
+      "@id" : "http://hbz-nrw.de/regal#name"
+    },
+    "natureOfContent" : {
+      "@type" : "@id",
+      "@id" : "http://rdaregistry.info/Elements/u/P60584",
+      "@container" : "@set"
+    },
+    "nextVersion" : {
+      "@id" : "http://hbz-nrw.de/regal#nextVersion",
+      "@container" : "@set"
+    },
+    "note" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#note",
+      "@container" : "@set"
+    },
+    "notification" : {
+      "@id" : "info:regal/zettel/notification"
+    },
+    "numbering" : {
+      "@id" : "http://purl.org/lobid/lv#numbering",
+      "@container" : "@set"
+    },
+    "nwbibspatial" : {
+      "@type" : "@id",
+      "@id" : "http://purl.org/lobid/lv#nwbibspatial",
+      "@container" : "@set"
+    },
+    "nwbibsubject" : {
+      "@type" : "@id",
+      "@id" : "http://purl.org/lobid/lv#nwbibsubject",
+      "@container" : "@set"
+    },
+    "objectTimestamp" : {
+      "@id" : "http://hbz-nrw.de/regal#objectTimestamp"
+    },
+    "otherTitleInformation" : {
+      "@id" : "http://rdvocab.info/Elements/otherTitleInformation",
+      "@container" : "@set"
+    },
+    "owner" : {
+      "@type" : "@id",
+      "@id" : "http://purl.org/vocab/frbr/core#owner",
+      "@container" : "@set"
+    },
+    "pages" : {
+      "@id" : "http://hbz-nrw.de/regal#pages"
+    },
+    "parallelEdition" : {
+      "@type" : "@id",
+      "@id" : "http://hbz-nrw.de/regal#parallelEdition"
+    },
+    "parentPid" : {
+      "@type" : "@id",
+      "@id" : "http://purl.org/dc/terms/isPartOf"
+    },
+    "placeOfPublication" : {
+      "@id" : "http://rdvocab.info/Elements/placeOfPublication"
+    },
+    "predecessor" : {
+      "@type" : "@id",
+      "@id" : "http://rdaregistry.info/Elements/u/P60261",
+      "@container" : "@set"
+    },
+    "prefLabel" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#prefLabel"
+    },
+    "preferredName" : {
+      "@id" : "http://d-nb.info/standards/elementset/gnd#preferredName"
+    },
+    "preferredNameEntityForThePerson" : {
+      "@id" : "http://d-nb.info/standards/elementset/gnd#preferredNameEntityForThePerson"
+    },
+    "preferredNameForTheConferenceOrEvent" : {
+      "@id" : "http://d-nb.info/standards/elementset/gnd#preferredNameForTheConferenceOrEvent"
+    },
+    "preferredNameForTheCorporateBody" : {
+      "@id" : "http://d-nb.info/standards/elementset/gnd#preferredNameForTheCorporateBody"
+    },
+    "preferredNameForTheFamily" : {
+      "@id" : "http://d-nb.info/standards/elementset/gnd#preferredNameForTheFamily"
+    },
+    "preferredNameForThePerson" : {
+      "@id" : "http://d-nb.info/standards/elementset/gnd#preferredNameForThePerson"
+    },
+    "preferredNameForThePlaceOrGeographicName" : {
+      "@id" : "http://d-nb.info/standards/elementset/gnd#preferredNameForThePlaceOrGeographicName"
+    },
+    "preferredNameForTheSubjectHeading" : {
+      "@id" : "http://d-nb.info/standards/elementset/gnd#preferredNameForTheSubjectHeading"
+    },
+    "preferredNameForTheWork" : {
+      "@id" : "http://d-nb.info/standards/elementset/gnd#preferredNameForTheWork"
+    },
+    "previousVersion" : {
+      "@id" : "http://hbz-nrw.de/regal#previousVersion",
+      "@container" : "@set"
+    },
+    "primaryForm" : {
+      "@type" : "@id",
+      "@id" : "http://purl.org/dc/terms/isFormatOf"
+    },
+    "primaryTopic" : {
+      "@type" : "@id",
+      "@id" : "http://xmlns.com/foaf/0.1/primaryTopic"
+    },
+    "professionalGroup" : {
+      "@type" : "@id",
+      "@id" : "http://hbz-nrw.de/regal#professionalGroup",
+      "@container" : "@list"
+    },
+    "projectId" : {
+      "@id" : "http://hbz-nrw.de/regal#projectId",
+      "@container" : "@list"
+    },
+    "publication" : {
+      "@type" : "@id",
+      "@id" : "http://schema.org/publication",
+      "@container" : "@set"
+    },
+    "publicationStatement" : {
+      "@id" : "http://rdvocab.info/Elements/publicationStatement"
+    },
+    "publicationStatus" : {
+      "@type" : "@id",
+      "@id" : "http://hbz-nrw.de/regal#publicationStatus"
+    },
+    "publicationYear" : {
+      "@id" : "http://hbz-nrw.de/regal#publicationYear"
+    },
+    "publishScheme" : {
+      "@id" : "http://hbz-nrw.de/regal#publishScheme"
+    },
+    "publishedBy" : {
+      "@id" : "http://schema.org/publishedBy",
+      "@container" : "@set"
+    },
+    "publisher" : {
+      "@id" : "http://purl.org/dc/elements/1.1/publisher"
+    },
+    "publisherVersion" : {
+      "@type" : "@id",
+      "@id" : "info:regal/zettel/publisherVersion",
+      "@container" : "@list"
+    },
+    "rdftype" : {
+      "@type" : "@id",
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+    },
+    "recordingCoordinates" : {
+      "@type" : "@id",
+      "@id" : "http://hbz-nrw.de/regal#recordingCoordinates",
+      "@container" : "@set"
+    },
+    "recordingLocation" : {
+      "@type" : "@id",
+      "@id" : "http://hbz-nrw.de/regal#recordingLocation",
+      "@container" : "@set"
+    },
+    "recordingPeriod" : {
+      "@id" : "http://hbz-nrw.de/regal#recordingPeriod"
+    },
+    "reference" : {
+      "@id" : "http://hbz-nrw.de/regal#reference",
+      "@container" : "@set"
+    },
+    "regal:publishLocation" : {
+      "@id" : "info:regal/regal/publishLocation"
+    },
+    "regal:publishYear" : {
+      "@id" : "info:regal/regal/publishYear"
+    },
+    "regal:publishedBy" : {
+      "@id" : "info:regal/regal/publishedBy"
+    },
+    "relatedResource" : {
+      "@id" : "http://hbz-nrw.de/regal#relatedResource",
+      "@container" : "@set"
+    },
+    "responsibilityStatement" : {
+      "@id" : "http://id.loc.gov/ontologies/bibframe/responsibilityStatement",
+      "@container" : "@set"
+    },
+    "reviewStatus" : {
+      "@type" : "@id",
+      "@id" : "http://hbz-nrw.de/regal#reviewStatus"
+    },
+    "role" : {
+      "@type" : "@id",
+      "@id" : "http://id.loc.gov/ontologies/bibframe/role"
+    },
+    "rpbSubject" : {
+      "@type" : "@id",
+      "@id" : "http://purl.org/lobid/lv#rpbSubject",
+      "@container" : "@set"
+    },
+    "sameAs" : {
+      "@id" : "http://www.w3.org/2002/07/owl#sameAs",
+      "@container" : "@set"
+    },
+    "seeAlso" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+      "@container" : "@set"
+    },
+    "series" : {
+      "@type" : "@id",
+      "@id" : "http://purl.org/lobid/lv#series",
+      "@container" : "@set"
+    },
+    "shortTitle" : {
+      "@id" : "http://purl.org/ontology/bibo/shortTitle",
+      "@container" : "@set"
+    },
+    "similarTo" : {
+      "@type" : "@id",
+      "@id" : "http://www.openarchives.org/ore/terms/similarTo"
+    },
+    "size" : {
+      "@id" : "http://downlode.org/Code/RDF/File_Properties/schema#size"
+    },
+    "source" : {
+      "@id" : "http://purl.org/dc/terms/source",
+      "@container" : "@set"
+    },
+    "spatial" : {
+      "@type" : "@id",
+      "@id" : "http://purl.org/dc/terms/spatial",
+      "@container" : "@set"
+    },
+    "startDate" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#gYear",
+      "@id" : "http://schema.org/startDate",
+      "@container" : "@set"
+    },
+    "statementOfResponsibility" : {
+      "@id" : "http://rdvocab.info/Elements/statementOfResponsibility"
+    },
+    "subject" : {
+      "@type" : "@id",
+      "@id" : "http://purl.org/dc/terms/subject",
+      "@container" : "@set"
+    },
+    "subjectAltLabel" : {
+      "@id" : "http://purl.org/lobid/lv#subjectAltLabel",
+      "@container" : "@set"
+    },
+    "subjectChain" : {
+      "@id" : "http://purl.org/lobid/lv#subjectChain"
+    },
+    "subjectLabel" : {
+      "@id" : "http://purl.org/lobid/lv#subjectLabel",
+      "@container" : "@set"
+    },
+    "subjectLocation" : {
+      "@id" : "http://purl.org/lobid/lv#subjectLocation",
+      "@container" : "@set"
+    },
+    "subjectName" : {
+      "@id" : "http://purl.org/dc/elements/1.1/subject",
+      "@container" : "@set"
+    },
+    "subjectOrder" : {
+      "@id" : "http://purl.org/lobid/lv#subjectOrder",
+      "@container" : "@list"
+    },
+    "successor" : {
+      "@type" : "@id",
+      "@id" : "http://rdaregistry.info/Elements/u/P60278",
+      "@container" : "@set"
+    },
+    "supplement" : {
+      "@type" : "@id",
+      "@id" : "http://id.loc.gov/ontologies/bibframe/supplement",
+      "@container" : "@set"
+    },
+    "tableOfContents" : {
+      "@id" : "http://purl.org/dc/terms/tableOfContents",
+      "@container" : "@set"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/terms/title"
+    },
+    "titleKeyword" : {
+      "@id" : "http://purl.org/lobid/lv#titleKeyword",
+      "@container" : "@set"
+    },
+    "titleLanguage" : {
+      "@id" : "http://hbz-nrw.de/regal#titleLanguage"
+    },
+    "translator" : {
+      "@id" : "http://purl.org/ontology/bibo/translator"
+    },
+    "type" : "@type",
+    "urn" : {
+      "@id" : "http://purl.org/lobid/lv#urn",
+      "@container" : "@set"
+    },
+    "usageManual" : {
+      "@id" : "http://hbz-nrw.de/regal#usageManual"
+    },
+    "volume" : {
+      "@id" : "http://hbz-nrw.de/regal#volume"
+    },
+    "volumeIn" : {
+      "@id" : "http://hbz-nrw.de/regal#volumeIn",
+      "@container" : "@set"
+    },
+    "webPageArchived" : {
+      "@type" : "@id",
+      "@id" : "http://purl.org/lobid/lv#webPageArchived",
+      "@container" : "@set"
+    },
+    "wikipedia" : {
+      "@id" : "http://purl.org/ontology/mo/wikipedia"
+    },
+    "workManifested" : {
+      "@type" : "@id",
+      "@id" : "http://rdvocab.info/RDARelationshipsWEMI/workManifested",
+      "@container" : "@set"
+    },
+    "xsd" : {
+      "@id" : "http://www.w3.org/2001/XMLSchema#",
+      "@container" : "@set"
+    },
+    "yearOfCopyright" : {
+      "@id" : "http://hbz-nrw.de/regal#yearOfCopyright"
+    },
+    "zdbId" : {
+      "@id" : "http://purl.org/lobid/lv#zdbID",
+      "@container" : "@set"
+    }
+  }
+}

@@ -33,7 +33,7 @@ import org.junit.Test;
 public class HowToReadFromAnURL {
 	@Test
 	public void readFromUrl() {
-		try (InputStream in = getInputStreamFromUrl("https://jira.atlassian.com/rest/api/2/issue/JSWCLOUD-11658")) {
+		try (InputStream in = getInputStreamFromUrl("http://jira.atlassian.com/rest/api/2/issue/JSWCLOUD-11658")) {
 			System.out.println(convertInputStreamToString(in));
 		} catch (Exception e) {
 			throw new RuntimeException(e);
@@ -94,8 +94,16 @@ public class HowToReadFromAnURL {
 			}
 			con.connect();
 			int responseCode = con.getResponseCode();
-			if (responseCode == HttpURLConnection.HTTP_MOVED_PERM || responseCode == HttpURLConnection.HTTP_MOVED_TEMP
-							|| responseCode == 307 || responseCode == 303) {
+			/* By default the connection will follow redirects. The following
+			 * block is only entered if the implementation of HttpURLConnection
+			 * does not perform the redirect. The exact behavior depends to 
+			 * the actual implementation (e.g. sun.net).
+			 * !!! Attention: This block allows the connection to 
+			 * switch protocols (e.g. HTTP to HTTPS), which is <b>not</b> 
+			 * default behavior. See: https://stackoverflow.com/questions/1884230 
+			 * for more info!!!
+			 */
+			if (responseCode < 400 && responseCode > 299) {
 				String redirectUrl = con.getHeaderField("Location");
 				try {
 					URL newUrl = new URL(redirectUrl);
@@ -105,6 +113,8 @@ public class HowToReadFromAnURL {
 					return urlToInputStream(newUrl, args);
 				}
 			}
+			/*!!!!!*/
+			
 			inputStream = con.getInputStream();
 			return inputStream;
 		} catch (Exception e) {
@@ -122,7 +132,6 @@ public class HowToReadFromAnURL {
 				map.put(key, (V) keyValues[index]);
 			}
 		}
-
 		return map;
 	}
 

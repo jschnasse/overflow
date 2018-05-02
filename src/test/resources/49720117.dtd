@@ -1,0 +1,23 @@
+<!ELEMENT library (item+)>
+<!ELEMENT item (image,title,type,editform,author+,year,link,vlink,description)>
+<!ATTLIST item CDATA #REQUIRED>
+<!ELEMENT image (#PCDATA)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT type (#PCDATA)>
+<!ELEMENT author (fname,sname,alink)>
+<!ATTLIST author CDATA #REQUIRED>
+<!ELEMENT fname (#PCDATA)>
+<!ELEMENT sname (#PCDATA)>
+<!ELEMENT alink (#PCDATA)>
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT link (#PCDATA)>
+<!ELEMENT vlink (#PCDATA)>
+<!ELEMENT description (summary,publication,language,database,oclc,issn,isbn)>
+<!ATTLIST description CDATA #REQUIRED>
+<!ELEMENT summary (#PCDATA)>
+<!ELEMENT publication (#PCDATA)>
+<!ELEMENT language (#PCDATA)>
+<!ELEMENT database (#PCDATA)>
+<!ELEMENT oclc (#PCDATA)>
+<!ELEMENT issn (#PCDATA)>
+<!ELEMENT isbn (#PCDATA)>

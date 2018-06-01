@@ -1,0 +1,11 @@
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix example: <http://example.com/vocabulary/> .
+@prefix dcat:  <http://www.w3.org/ns/dcat#> .
+
+<http://example.com/datasets/1>
+        a                     dcat:Distribution ;
+        example:props         [ example:prop1  "hello" ;
+                                example:prop2  "1" 
+                              ] ;
+        dct:description       "test data" .

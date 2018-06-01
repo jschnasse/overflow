@@ -1,0 +1,22 @@
+{
+  "@context": {
+    "dct": "http://purl.org/dc/terms/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "example": "http://example.com/vocabulary/"
+  },
+  "@graph": [
+    {
+      "@id": "_:b0",
+      "example:prop1": "hello",
+      "example:prop2": "1"
+    },
+    {
+      "@id": "http://example.com/datasets/1",
+      "@type": "dcat:Distribution",
+      "example:props": {
+        "@id": "_:b0"
+      }
+    }
+  ]
+}

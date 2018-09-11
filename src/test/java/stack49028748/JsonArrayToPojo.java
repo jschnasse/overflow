@@ -23,4 +23,14 @@ public class JsonArrayToPojo {
 			}
 		}
 	}
+
+	@Test
+	public void json2() throws JsonParseException, JsonMappingException, IOException {
+		ObjectMapper mapper = new ObjectMapper();
+		JsonNode node = mapper.readValue(
+						"{\"TemplateArray\":[{\"Id\":16,\"Name\":\"Machine\",\"type\":\"PM\"}, {\"Id\":17,\"Name\":\"Ethernet\",\"type\":\"PM\"},{\"Id\":18,\"Name\":\"Hard Disk\",\"type\":\"PM\"}]}",
+						JsonNode.class);
+		node.at("/TemplateArray").forEach(a -> System.out.println(a.at("/Name")));
+	}
+
 }

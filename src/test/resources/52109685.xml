@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RootNode_001>
+    <systemId>on the 4</systemId>
+    <systemName>give me some more</systemName>
+    <type>test</type>
+    <person>
+        <firstname>James</firstname>
+        <lastname>Brown</lastname>
+        <address>
+            <street>Funky</street>
+            <city>Town</city>
+            <type>HOME</type> <!-- this is the new field -->
+        </address>
+    </person>
+</RootNode_001>

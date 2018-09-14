@@ -96,6 +96,7 @@ public class HowToLoadZippedRdfToRdf4jRepository {
 										repo.getConnection());) {
 			RepositoryConnectionListenerAdapter myListener = new RepositoryConnectionListenerAdapter() {
 				private long count = 0;
+
 				@Override
 				public void add(RepositoryConnection arg0, Resource arg1, IRI arg2, Value arg3, Resource... arg4) {
 					count++;
@@ -104,7 +105,7 @@ public class HowToLoadZippedRdfToRdf4jRepository {
 				}
 			};
 			con.addRepositoryConnectionListener(myListener);
-			con.add(in, "", format,context);
+			con.add(in, "", format, context);
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}

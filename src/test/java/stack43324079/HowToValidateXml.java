@@ -143,6 +143,16 @@ public class HowToValidateXml {
 		new XmlSchemaValidator().validate(xmlStream, schemaStream, "https://schema.datacite.org/meta/kernel-4.1/",
 						"schemas/datacite/kernel-4.1/");
 	}
+	
+	@Test(expected = SAXParseException.class)
+	public void validate5() throws Exception {
+		InputStream xmlStream = Thread.currentThread().getContextClassLoader().getResourceAsStream(
+						"48985313.xml");
+		InputStream schemaStream = Thread.currentThread().getContextClassLoader()
+						.getResourceAsStream("eventos31.xsd");
+		new XmlSchemaValidator().validate(xmlStream, schemaStream, "",
+						"/");
+	}
 
 	@Test(expected = SAXParseException.class)
 	public void validate4_must_fail() throws Exception {

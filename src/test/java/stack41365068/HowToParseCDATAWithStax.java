@@ -18,6 +18,10 @@ package stack41365068;
 import org.junit.Test;
 
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 
 import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamConstants;
@@ -55,4 +59,14 @@ public class HowToParseCDATAWithStax {
 		}
 	}
 
+	@Test
+	public void testList(){
+
+	    List<Integer> list1 =  Arrays.asList(1, 2, 2, 3,3);
+	    List<Integer> list2 =  Arrays.asList(1, 2, 4,6, 5);
+	    List<Integer> diff = list1.stream()
+	                              .filter(e -> !list2.contains(e))
+	                              .collect (Collectors.toList());
+	    System.out.println(diff);
+	}
 }

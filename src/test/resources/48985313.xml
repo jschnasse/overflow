@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eventos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="eventos31.xsd">
+<evento tipo="musical">
+    <compania>
+        <nombre_compania>La Joven Compañia</nombre_compania>
+        <interpretes>
+            <interprete codint="I1"> Javier   Ariano</interprete>
+            <interprete codint="I2"> Alejandro Chaparro</interprete>
+            <interprete codint="I3"> Jesús Lavi</interprete>
+            <interprete codint="I4"> Rosa Martí</interprete>
+            <interprete codint="I5"> Laura Montesinos</interprete>
+            <interprete codint="I6"> Maria Romero</interprete>
+            <interprete codint="I7"> Ález Villazán</interprete>
+            <interprete codint="I8"> Jorge Yumar</interprete>
+        </interpretes>
+        <director-a> José Luis Arellano García</director-a>
+        <web_compania dirweb= "www.lajovencompania.com"/>
+    </compania> 
+    <nombre_espectaculo>Priscila, reina del desierto</nombre_espectaculo>
+    <cuando>
+        <fecha dia="22" mes="febrero" anio="2018"/>
+        <hora inicio="20:30" fin="23:00"/>
+    </cuando>
+    <descripcion>Narra las aventuras de tres artistas drag</descripcion>
+    <precio>55€</precio>
+    <duracion>2h 30min</duracion>
+</evento>
+<evento tipo="magia">
+    <mago>
+        <nombre_mago> Jorge Blass</nombre_mago>
+        <mail dirmail= "naka@7rojo.com"/>
+        <shows>
+            <show codshow="C1"> Palabra de Mago</show>
+            <show codshow="C2"> Arte de la Magia</show>
+            <show codshow="C3"> Birlibirloque</show>
+        </shows>
+    </mago> 
+    <nombre_espectaculo>Palabra de mago</nombre_espectaculo>
+    <cuando>
+        <fecha dia="02" mes="Junio" anio="2018"/>
+        <hora inicio="19:00" fin="20:30"/>
+    </cuando>
+    <descripcion>Trucos de magia de Jorge Blas</descripcion>
+    <precio>18€</precio>
+    <duracion>1h 30min</duracion>
+</evento>
+<evento tipo="humor">
+    <comico>
+        <nombre_comico> Dani Mateo</nombre_comico>
+        <ciudad> Granollers</ciudad>
+        <edad> 38</edad>
+        <redes_sociales>
+            <blog> danimateo.blogspot.com</blog>
+            <twitter> @DaniMateoAgain</twitter>
+            <facebook> @dani.mateo</facebook>
+        </redes_sociales>
+    </comico>   
+    <nombre_espectaculo>Dani Mateo,10 aniversario</nombre_espectaculo>
+    <cuando>
+        <fecha dia="09" mes="Junio" anio="2018"/>
+        <hora inicio="20:30" fin="22:00"/>
+    </cuando>
+    <precio>21€</precio>
+    <duracion>1h 30min</duracion>
+</evento>
+</eventos>

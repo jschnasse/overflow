@@ -30,6 +30,9 @@ import java.util.Map.Entry;
 
 import org.junit.Test;
 
+import com.google.common.base.Splitter;
+import com.google.common.collect.Iterables;
+
 public class HowToReadFromAnURL {
 	@Test
 	public void readFromUrl() {
@@ -85,6 +88,7 @@ public class HowToReadFromAnURL {
 		InputStream inputStream = null;
 		try {
 			con = (HttpURLConnection) url.openConnection();
+			con.setInstanceFollowRedirects(false);
 			con.setConnectTimeout(15000);
 			con.setReadTimeout(15000);
 			if (args != null) {
@@ -134,5 +138,4 @@ public class HowToReadFromAnURL {
 		}
 		return map;
 	}
-
 }

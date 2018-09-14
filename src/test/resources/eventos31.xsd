@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="eventos">
+    <xs:complexType>
+    <xs:sequence>
+    <xs:element name="evento" maxOccurs="unbounded">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="compania">
+                <xs:complexType>
+                    <xs:sequence>
+                    <xs:element name="nombre_compania" type="xs:string" />
+                    <xs:element name="interpretes">
+                        <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="interprete" maxOccurs="unbounded"/>   
+                        </xs:sequence>
+                            <xs:attribute name="codint" type="xs:string" use="required"/>
+                        </xs:complexType>
+                    </xs:element>   
+                    <xs:element name="director-a" type="xs:string" />
+                    <xs:element name="web_compania"/>   
+                    </xs:sequence>
+                    <xs:attribute name="dirweb" type="xs:string"/>
+                </xs:complexType>
+            </xs:element>   
+            <xs:element name="nombre_espectaculo" type="xs:string" maxOccurs="unbounded"/>  
+            <xs:element name="cuando">
+                        <xs:complexType>
+                            <xs:sequence>
+                            <xs:element name="fecha"/>
+                            <xs:element name="hora"/>
+                            </xs:sequence>
+                            <xs:attribute name="dia" type="xs:integer"/>
+                            <xs:attribute name="mes" type="xs:string"/>
+                            <xs:attribute name="anio" type="xs:integer"/>
+                            <xs:attribute name="inicio" type="xs:string"/>
+                            <xs:attribute name="fin" type="xs:string"/>
+                        </xs:complexType>
+            </xs:element>   
+            <xs:element name="descripcion" type="xs:string"/>
+            <xs:element name="precio" type="xs:string"/>
+            <xs:element name="duracion" type="xs:string"/>
+            <xs:element name="mago" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="nombre_mago" type="xs:string"/>
+                        <xs:element name="mail"/>   
+                        <xs:element name="shows">
+                            <xs:complexType>
+                            <xs:sequence>
+                            <xs:element name="show" type="xs:string"/>  
+                            </xs:sequence>
+                            <xs:attribute name="codshow" type="xs:string" use="required"/>
+                            </xs:complexType>
+                        </xs:element>   
+                    </xs:sequence>
+                    <xs:attribute name="dirmail" type="xs:string"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="comico" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="nombre_comico" type="xs:string"/>
+                        <xs:element name="ciudad" type="xs:string"/>
+                        <xs:element name="edad" type="xs:integer"/>
+                        <xs:element name="redes_sociales">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="blog" type="xs:string"/>
+                                    <xs:element name="twitter" type="xs:string"/>
+                                    <xs:element name="facebook" type="xs:string"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>   
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>   
+        </xs:sequence>
+        <xs:attribute name="tipo" type="xs:string"/>
+    </xs:complexType>   
+    </xs:element>
+    </xs:sequence>
+    </xs:complexType>   
+</xs:element>  
+</xs:schema>
+ 

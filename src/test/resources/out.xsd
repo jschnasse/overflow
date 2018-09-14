@@ -1,0 +1,135 @@
+      <?xml version="1.0" encoding="UTF-8"?>
+      <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <xs:import namespace="http://www.w3.org/2001/XMLSchema-instance" schemaLocation="xsi.xsd"/>
+        <xs:element name="eventos">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" ref="evento"/>
+            </xs:sequence>
+            <xs:attribute ref="xsi:noNamespaceSchemaLocation" use="required"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="evento">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:choice>
+                <xs:element ref="comico"/>
+                <xs:element ref="compania"/>
+                <xs:element ref="mago"/>
+              </xs:choice>
+              <xs:element ref="nombre_espectaculo"/>
+              <xs:element ref="cuando"/>
+              <xs:element minOccurs="0" ref="descripcion"/>
+              <xs:element ref="precio"/>
+              <xs:element ref="duracion"/>
+            </xs:sequence>
+            <xs:attribute name="tipo" use="required" type="xs:NCName"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="comico">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="nombre_comico"/>
+              <xs:element ref="ciudad"/>
+              <xs:element ref="edad"/>
+              <xs:element ref="redes_sociales"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="nombre_comico" type="xs:string"/>
+        <xs:element name="ciudad" type="xs:NCName"/>
+        <xs:element name="edad" type="xs:integer"/>
+        <xs:element name="redes_sociales">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="blog"/>
+              <xs:element ref="twitter"/>
+              <xs:element ref="facebook"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="blog" type="xs:NCName"/>
+        <xs:element name="twitter" type="xs:string"/>
+        <xs:element name="facebook" type="xs:string"/>
+        <xs:element name="compania">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="nombre_compania"/>
+              <xs:element ref="interpretes"/>
+              <xs:element ref="director-a"/>
+              <xs:element ref="web_compania"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="nombre_compania" type="xs:string"/>
+        <xs:element name="interpretes">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" ref="interprete"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="interprete">
+          <xs:complexType mixed="true">
+            <xs:attribute name="codint" use="required" type="xs:NCName"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="director-a" type="xs:string"/>
+        <xs:element name="web_compania">
+          <xs:complexType>
+            <xs:attribute name="dirweb" use="required" type="xs:NCName"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="mago">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="nombre_mago"/>
+              <xs:element ref="mail"/>
+              <xs:element ref="shows"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="nombre_mago" type="xs:string"/>
+        <xs:element name="mail">
+          <xs:complexType>
+            <xs:attribute name="dirmail" use="required"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="shows">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" ref="show"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="show">
+          <xs:complexType mixed="true">
+            <xs:attribute name="codshow" use="required" type="xs:NCName"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="nombre_espectaculo" type="xs:string"/>
+        <xs:element name="cuando">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="fecha"/>
+              <xs:element ref="hora"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="fecha">
+          <xs:complexType>
+            <xs:attribute name="anio" use="required" type="xs:integer"/>
+            <xs:attribute name="dia" use="required" type="xs:integer"/>
+            <xs:attribute name="mes" use="required" type="xs:NCName"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="hora">
+          <xs:complexType>
+            <xs:attribute name="fin" use="required" type="xs:NMTOKEN"/>
+            <xs:attribute name="inicio" use="required" type="xs:NMTOKEN"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="descripcion" type="xs:string"/>
+        <xs:element name="precio" type="xs:string"/>
+        <xs:element name="duracion" type="xs:string"/>
+      </xs:schema>

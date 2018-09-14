@@ -239,5 +239,8 @@
 }, {
   "in" : "http://urltest.lookout.net/",
   "out" : "http://urltest.lookout.net/"
+},{
+ "in":"http://servername:7778/reports/rwservlet?server=server1&ORACLE_SHUTDOWN=YES&PARAMFORM=no&report=test.rdf&desformat=pdf&desname=test.pdf&destype=cache&param1=56738&faces-redirect=true&userid=username/passwd@DBname",
+ "out":"http://servername:7778/reports/rwservlet?server=server1&ORACLE_SHUTDOWN=YES&PARAMFORM=no&report=test.rdf&desformat=pdf&desname=test.pdf&destype=cache&param1=56738&faces-redirect=true&userid=username/passwd@DBname"
 }]
 }

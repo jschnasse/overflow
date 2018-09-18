@@ -30,7 +30,14 @@
 
 [HowToCountWordOccurrences](src/test/java/stack44164695)
 
-[HowToReadXmlToAPojoIn2017](src/test/java/stack47711679)
+[HowToReadXmlToAPojoIn2017](src/test/java/stack47711679) and [here](src/test/java/stack52109685) 
 
 [HowToReadDataFromUrl](src/test/java/stack48618849)
 
+[HowToCreateJsonLdFromNestedObjectStructure](src/test/java/stack50738973)
+
+[HowToEncodeAnUrl](src/test/java/stack724043)
+
+[SubtractCollection](src/test/java/stack49410929)
+
+[HowToCreateJsonFromXmlWithXmlSchema](src/test/java/stack24174963)

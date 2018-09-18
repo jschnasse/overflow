@@ -1,8 +1,6 @@
 package stack24174963;
 
-import java.io.BufferedInputStream;
-import java.io.File;
-import java.io.FileInputStream;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -19,14 +17,15 @@ import com.fasterxml.jackson.databind.SerializationFeature;
 import com.google.common.base.Charsets;
 import com.google.common.io.CharStreams;
 
-/**
-       * /opt/java/bin/xjc -d ~/development/overflow/src/test/java -p stack24174963.datacite https://schema.datacite.org/meta/kernel-4.1/metadata.xsd
-       */
+
 import stack24174963.datacite.Resource;
 
 public class HowToXmlToJsonWithSchema {
+	/**
+	 * /opt/java/bin/xjc -d ~/development/overflow/src/test/java -p stack24174963.datacite https://schema.datacite.org/meta/kernel-4.1/metadata.xsd
+	 */
 	@Test
-	public void readXmlAndConvertToSchema() throws Exception {
+	public void readXmlAndConvertToSchemaWithXjc() throws Exception {
 		String example = "schemas/datacite/kernel-4.1/example/datacite-example-complicated-v4.1.xml";
 		try (InputStream in = Thread.currentThread().getContextClassLoader().getResourceAsStream(example)) {
 			Resource resource = JAXB.unmarshal(in, Resource.class);
@@ -166,7 +165,7 @@ public class HowToXmlToJsonWithSchema {
 	}
 
 	@Test
-	public void xmlToJson() throws IOException {
+	public void xmlToJsonWithJsonOrg() throws IOException {
 		String example = "schemas/datacite/kernel-4.1/example/datacite-example-complicated-v4.1.xml";
 		try (InputStream in = Thread.currentThread().getContextClassLoader().getResourceAsStream(example)) {
 			String xml = CharStreams.toString(new InputStreamReader(in, Charsets.UTF_8));

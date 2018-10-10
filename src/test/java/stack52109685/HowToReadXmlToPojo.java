@@ -6,7 +6,6 @@ import java.io.StringWriter;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
-import javax.xml.bind.PropertyException;
 
 import org.junit.Test;
 
@@ -35,7 +34,7 @@ public class HowToReadXmlToPojo {
 		XmlMapper xmlMapper = new XmlMapper();
 		return xmlMapper.writeValueAsString(pojo);
 	}
-	
+
 	private void asXml2(ExtAdress pojo) throws JAXBException {
 		JAXBContext jaxbContext = JAXBContext.newInstance(ExtAdress.class);
 		Marshaller jaxbMarshaller = jaxbContext.createMarshaller();

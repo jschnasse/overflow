@@ -94,7 +94,7 @@ public class HowToReadPartsOfXmlUsingXPath {
 			DOMSource source = new DOMSource(node);
 			transformer.transform(source, result);
 			String xmlString = result.getWriter().toString();
-			out.println(xmlString);
+			System.out.println(xmlString);
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}

@@ -1,0 +1,37 @@
+<root>
+	<ApiHeader>
+		<OperationName>findEntitiesResponse</OperationName>
+	</ApiHeader>
+	<ResponseHeader>
+		<CompletedSuccessfully>true</CompletedSuccessfully>
+	</ResponseHeader>
+	<Page>
+		<StartAtRow>0</StartAtRow>
+		<MaxRows>999999</MaxRows>
+		<TotalRowCount>44</TotalRowCount>
+	</Page>
+	<Entity>
+		<Carrier>
+			<Id>11460</Id>
+			<CarrierCode>11460</CarrierCode>
+			<CarrierDescription>11460 LOGIS COUTTER</CarrierDescription>
+			<LanguageCode>en</LanguageCode>
+			<LanguageCodeDescr>Inglés</LanguageCodeDescr>
+			<CarrierTypeCode>GENERAL</CarrierTypeCode>
+			<CarrierTypeCodeDescr>GENERAL</CarrierTypeCodeDescr>
+			<SCACCode>Default</SCACCode>
+		</Carrier>
+	</Entity>
+	<Entity>
+		<Carrier>
+			<Id>11460</Id>
+			<CarrierCode>11460</CarrierCode>
+			<CarrierDescription>11460 LOGIS COUTTER</CarrierDescription>
+			<LanguageCode>en</LanguageCode>
+			<LanguageCodeDescr>Inglés</LanguageCodeDescr>
+			<CarrierTypeCode>GENERAL</CarrierTypeCode>
+			<CarrierTypeCodeDescr>GENERAL</CarrierTypeCodeDescr>
+			<SCACCode>Default</SCACCode>
+		</Carrier>
+	</Entity>
+</root>

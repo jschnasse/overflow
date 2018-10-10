@@ -40,8 +40,8 @@ import org.w3c.dom.NodeList;
 public class HowToReadPartsOfXmlUsingXPath {
 	@Test
 	public void printXml() {
-		try (InputStream in = readFile("52720162.xml")) {
-			processFilteredXml(in, "//root/Entity", (node) -> {
+		try (InputStream in = readFile("book.xml")) {
+			processFilteredXml(in, "//book/creators/creator/creatorName", (node) -> {
 				printNode(node, System.out);
 			});
 		} catch (Exception e) {
@@ -88,6 +88,7 @@ public class HowToReadPartsOfXmlUsingXPath {
 		try {
 			Transformer transformer = TransformerFactory.newInstance().newTransformer();
 			transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+			transformer.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, "yes");
 			transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
 			StreamResult result = new StreamResult(new StringWriter());
 			DOMSource source = new DOMSource(node);

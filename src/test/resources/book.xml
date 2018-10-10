@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<book>
+  <creators>
+    <creator>
+      <creatorName>Fosmire, Michael</creatorName>
+      <givenName>Michael</givenName>
+      <familyName>Fosmire</familyName>
+    </creator>
+    <creator>
+      <creatorName>Wertz, Ruth</creatorName>
+      <givenName>Ruth</givenName>
+      <familyName>Wertz</familyName>
+    </creator>
+    <creator>
+      <creatorName>Purzer, Senay</creatorName>
+       <givenName>Senay</givenName>
+      <familyName>Purzer</familyName>
+    </creator>
+  </creators>
+  <titles>
+    <title>Critical Engineering Literacy Test (CELT)</title>
+  </titles>
+</book>

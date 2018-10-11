@@ -15,6 +15,7 @@
  ******************************************************************************/
 package stack52720162;
 
+import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.io.PrintStream;
 import java.io.StringWriter;
@@ -53,7 +54,9 @@ public class HowToReadPartsOfXmlUsingXPath {
 		return Thread.currentThread().getContextClassLoader().getResourceAsStream(yourSampleFile);
 	}
 
-	private void processFilteredXml(InputStream in, String xpath, Consumer<Node> process) {
+	
+
+	public void processFilteredXml(InputStream in, String xpath, Consumer<Node> process) {
 		Document doc = readXml(in);
 		NodeList list = filterNodesByXPath(doc, xpath);
 		for (int i = 0; i < list.getLength(); i++) {
@@ -62,7 +65,7 @@ public class HowToReadPartsOfXmlUsingXPath {
 		}
 	}
 
-	public Document readXml(InputStream xmlin) {
+	private Document readXml(InputStream xmlin) {
 		try {
 			DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 			DocumentBuilder db = dbf.newDocumentBuilder();
@@ -94,7 +97,20 @@ public class HowToReadPartsOfXmlUsingXPath {
 			DOMSource source = new DOMSource(node);
 			transformer.transform(source, result);
 			String xmlString = result.getWriter().toString();
-			System.out.println(xmlString);
+			out.println(xmlString);
+		} catch (Exception e) {
+			throw new RuntimeException(e);
+		}
+	}
+
+	@Test
+	public void xpathJava8() {
+		String xml = "<root><tagA attA=\"VAL1\">text</tagA>\n" + "<tagB attB=\"VAL333\">text</tagB>\n"
+						+ "<tagA attA=\"VAL2\">text</tagA>\n" + "<tagA attA=\"V2\">text</tagA>\n" + "</root>";
+		try (InputStream in = new ByteArrayInputStream(xml.getBytes("utf-8"));) {
+			processFilteredXml(in, "//root/tagA[boolean(number(substring-after(@attA, \"VAL\")))]", (node) -> {
+				printNode(node, System.out);
+			});
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}

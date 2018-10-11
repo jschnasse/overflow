@@ -27,12 +27,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class HowToUseTypeReferencesInJackson {
 	@Test
-	public void test() throws JsonParseException, JsonMappingException, IOException{
+	public void test() throws JsonParseException, JsonMappingException, IOException {
 		ObjectMapper mapper = new ObjectMapper();
-		List<Long>listOfLong=mapper.readValue("[ 123421, 15643, 51243]" ,
-                        new TypeReference<List<Long>>() {
-                        });
+		List<Long> listOfLong = mapper.readValue("[ 123421, 15643, 51243]", new TypeReference<List<Long>>() {
+		});
 		System.out.println(listOfLong);
-		
 	}
 }

@@ -56,7 +56,6 @@ public class HowToXPathWithSaxon {
 		list.forEach((node) -> {
 			process.accept(node);
 		});
-
 	}
 
 	private XdmNode readXmlWith(InputStream xmlin) {
@@ -74,5 +73,4 @@ public class HowToXPathWithSaxon {
 			throw new RuntimeException(e);
 		}
 	}
-
 }

@@ -47,7 +47,8 @@ public class HowToEncodeAUrl {
 				String url = test.at("/in").asText();
 				String expected = test.at("/out").asText();
 				String encodedUrl = URLUtil.saveEncode(url);
-				org.junit.Assert.assertTrue(expected.equals(encodedUrl));
+				System.out.println(url+" , '"+expected+"' , '"+encodedUrl+"'");
+				org.junit.Assert.assertEquals(expected,encodedUrl);
 			}
 		} catch (Exception e) {
 			throw new RuntimeException(e);

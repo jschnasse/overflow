@@ -22,37 +22,47 @@ import java.net.URL;
 import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
 
+import com.google.common.base.CharMatcher;
+
 /**
  * 
  * @author Jan Schnasse
  *
  */
 public class URLUtil {
-	 /*
-     * This method will only encode an URL if it is not encoded already. It will
-     * also replace '+'-encoded spaces with percent encoding.
-     */
-    public static String saveEncode(String url) {
-        try {
-            String passedUrl = url.replaceAll("\\+", "%20");
-            if (!isAlreadyEncoded(passedUrl)) {
-                return encode(passedUrl);
-            }
-            return url;
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-    }
-	private static boolean isAlreadyEncoded(String passedUrl) {
-		boolean isEncoded=true;
-		if(passedUrl.contains(" ")) {
-			isEncoded=false;
+	/*
+	 * This method will only encode an URL if it is not encoded already. It will
+	 * also replace '+'-encoded spaces with percent encoding.
+	 */
+	public static String saveEncode(String url) {
+		try {
+			String passedUrl = url.replaceAll("\\+", "%20");
+			if (!isAlreadyEncoded(passedUrl)) {
+				return encode(passedUrl);
+			}
+			if(!CharMatcher.ASCII.matchesAllOf(passedUrl)) {
+				return encode(passedUrl);
+			}
+			if(passedUrl.endsWith(":/")) {
+				return encode(passedUrl);
+			}
+			if(Character.isUpperCase(passedUrl.charAt(0))) {
+				return encode(passedUrl);
+			}
+			return passedUrl;
+		} catch (Exception e) {
+			throw new RuntimeException(e);
 		}
-		if(passedUrl.contains("\"")) {
-			isEncoded=false;
+	}
+
+	private static boolean isAlreadyEncoded(String passedUrl) {
+		boolean isEncoded = true;
+		if (passedUrl.matches(".*[\\ \"\\<\\>\\{\\}|\\\\^~\\[\\]].*")) {
+			isEncoded = false;
 		}
 		return isEncoded;
 	}
+
 	public static String encode(String url) {
 		try {
 			URL u = new URL(url);

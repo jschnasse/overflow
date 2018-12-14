@@ -46,7 +46,7 @@ public class HowToEncodeAUrl {
 			for (JsonNode test : testdata) {
 				String url = test.at("/in").asText();
 				String expected = test.at("/out").asText();
-				String encodedUrl = URLUtil.encode(url);
+				String encodedUrl = URLUtil.saveEncode(url);
 				org.junit.Assert.assertTrue(expected.equals(encodedUrl));
 			}
 		} catch (Exception e) {
@@ -113,7 +113,7 @@ public class HowToEncodeAUrl {
 
 				String encodedUrl = "ERROR";
 				try {
-					encodedUrl = URLUtil.encode(url);
+					encodedUrl = URLUtil.saveEncode(url);
 				} catch (Exception e) {
 					System.err.println(e.getMessage());
 				}
@@ -140,7 +140,7 @@ public class HowToEncodeAUrl {
 				String expected = test.at("/out").asText();
 				String encodedUrl = "ERROR";
 				try {
-					encodedUrl = URLUtil.encode(url);
+					encodedUrl = URLUtil.saveEncode(url);
 				} catch (Exception e) {
 					System.err.println(e.getMessage());
 				}

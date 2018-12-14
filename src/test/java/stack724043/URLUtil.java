@@ -28,6 +28,31 @@ import java.nio.charset.StandardCharsets;
  *
  */
 public class URLUtil {
+	 /*
+     * This method will only encode an URL if it is not encoded already. It will
+     * also replace '+'-encoded spaces with percent encoding.
+     */
+    public static String saveEncode(String url) {
+        try {
+            String passedUrl = url.replaceAll("\\+", "%20");
+            if (!isAlreadyEncoded(passedUrl)) {
+                return encode(passedUrl);
+            }
+            return url;
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+	private static boolean isAlreadyEncoded(String passedUrl) {
+		boolean isEncoded=true;
+		if(passedUrl.contains(" ")) {
+			isEncoded=false;
+		}
+		if(passedUrl.contains("\"")) {
+			isEncoded=false;
+		}
+		return isEncoded;
+	}
 	public static String encode(String url) {
 		try {
 			URL u = new URL(url);

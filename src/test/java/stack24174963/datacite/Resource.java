@@ -1204,8 +1204,8 @@ public class Resource {
 
             @XmlElement(required = true)
             protected Resource.Contributors.Contributor.ContributorName contributorName;
-            protected Object givenName;
-            protected Object familyName;
+            protected String givenName;
+            protected String familyName;
             protected List<Resource.Contributors.Contributor.NameIdentifier> nameIdentifier;
             protected List<Object> affiliation;
             @XmlAttribute(name = "contributorType", required = true)
@@ -1243,7 +1243,7 @@ public class Resource {
              *     {@link Object }
              *     
              */
-            public Object getGivenName() {
+            public String getGivenName() {
                 return givenName;
             }
 
@@ -1255,7 +1255,7 @@ public class Resource {
              *     {@link Object }
              *     
              */
-            public void setGivenName(Object value) {
+            public void setGivenName(String value) {
                 this.givenName = value;
             }
 
@@ -1267,7 +1267,7 @@ public class Resource {
              *     {@link Object }
              *     
              */
-            public Object getFamilyName() {
+            public String getFamilyName() {
                 return familyName;
             }
 
@@ -1279,7 +1279,7 @@ public class Resource {
              *     {@link Object }
              *     
              */
-            public void setFamilyName(Object value) {
+            public void setFamilyName(String value) {
                 this.familyName = value;
             }
 
@@ -1698,8 +1698,8 @@ public class Resource {
 
             @XmlElement(required = true)
             protected Resource.Creators.Creator.CreatorName creatorName;
-            protected Object givenName;
-            protected Object familyName;
+            protected String givenName;
+            protected String familyName;
             protected List<Resource.Creators.Creator.NameIdentifier> nameIdentifier;
             protected List<Object> affiliation;
 
@@ -1735,7 +1735,7 @@ public class Resource {
              *     {@link Object }
              *     
              */
-            public Object getGivenName() {
+            public String getGivenName() {
                 return givenName;
             }
 
@@ -1747,7 +1747,7 @@ public class Resource {
              *     {@link Object }
              *     
              */
-            public void setGivenName(Object value) {
+            public void setGivenName(String value) {
                 this.givenName = value;
             }
 
@@ -1759,7 +1759,7 @@ public class Resource {
              *     {@link Object }
              *     
              */
-            public Object getFamilyName() {
+            public String getFamilyName() {
                 return familyName;
             }
 
@@ -1771,7 +1771,7 @@ public class Resource {
              *     {@link Object }
              *     
              */
-            public void setFamilyName(Object value) {
+            public void setFamilyName(String value) {
                 this.familyName = value;
             }
 

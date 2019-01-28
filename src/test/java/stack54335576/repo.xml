@@ -1,0 +1,14 @@
+    <repository>
+    <book>
+    <id>1</id>
+    <status>available</status>
+    </book>
+    <book>
+    <id>2</id>
+    <status>lost</status>
+    </book>
+    <article>
+    <id>1</id>
+    <status>in transit</status>
+    </article>
+    </repository>

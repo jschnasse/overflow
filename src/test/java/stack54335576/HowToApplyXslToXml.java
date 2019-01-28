@@ -24,7 +24,7 @@ import org.w3c.dom.Element;
 public class HowToApplyXslToXml {
 
 	@Test
-	public void applyMultipleXsl() {
+	public void useMultipleXmlSourcesInOneXsl() {
 		InputStream xml = Thread.currentThread().getContextClassLoader().getResourceAsStream("stack54335576/repo.xml");
 		InputStream xsl = Thread.currentThread().getContextClassLoader().getResourceAsStream("stack54335576/join.xsl");
 		String booksXmlPath = "src/test/java/stack54335576/books.xml";

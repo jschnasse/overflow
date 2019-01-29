@@ -15,18 +15,14 @@
  ******************************************************************************/
 package stack54335576;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.InputStream;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.transform.Result;
 import javax.xml.transform.Source;
-import javax.xml.transform.SourceLocator;
 import javax.xml.transform.Templates;
 import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
@@ -51,7 +47,7 @@ public class HowToApplyXslToXml {
 	}
 
 	private void insertFileSourceIntoXsl(Document xslDocument, String name,String xmlPath) {
-		Element param = xslDocument.createElement("xsl:param");
+		Element param = xslDocument.createElementNS("http://www.w3.org/1999/XSL/Transform", "xsl:param");
 		param.setAttribute("name", name);
 		param.setAttribute("select", "document('"+xmlPath+"')");
 		xslDocument.getFirstChild().appendChild(param);
@@ -73,10 +69,16 @@ public class HowToApplyXslToXml {
 	private Document readXml(InputStream xmlin) {
 		try {
 			DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+			dbf.setNamespaceAware(true);
 			DocumentBuilder db = dbf.newDocumentBuilder();
 			return db.parse(xmlin);
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}
+	}
+	
+	@Test
+	public void solution2() {
+		
 	}
 }

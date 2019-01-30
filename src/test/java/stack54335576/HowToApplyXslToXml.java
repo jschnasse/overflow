@@ -43,15 +43,15 @@ public class HowToApplyXslToXml {
 		InputStream xsl = Thread.currentThread().getContextClassLoader().getResourceAsStream("stack54335576/join.xsl");
 		String booksXmlPath = "src/test/java/stack54335576/books.xml";
 		String articlesXmlPath = "src/test/java/stack54335576/articles.xml";
-		xslt(xml, new StreamSource(xsl),new Pair<String, String>("bookFile", booksXmlPath),new Pair<String, String>("articleFile", articlesXmlPath));
+		xslt(xml, xsl,new Pair<String, String>("bookFile", booksXmlPath),new Pair<String, String>("articleFile", articlesXmlPath));
 	}
 
 	
 	@SafeVarargs
-	public final void xslt(InputStream xml, Source xsl,Pair<String,String>...params) {
+	public final void xslt(InputStream xml, InputStream xsl,Pair<String,String>...params) {
 		try {
 			TransformerFactory factory = TransformerFactory.newInstance();
-			Transformer transformer = factory.newTransformer(xsl);
+			Transformer transformer = factory.newTransformer(new StreamSource(xsl));
 			Stream.of(params).forEach((p)->transformer.setParameter(p.fst, p.snd) );
 			transformer.transform(new StreamSource(xml), new StreamResult(System.out));
 		} catch (Exception e) {

@@ -16,6 +16,7 @@
 package stack54335576;
 
 import java.io.InputStream;
+import java.util.stream.Stream;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -32,24 +33,48 @@ import org.junit.Test;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
+import com.sun.tools.javac.util.Pair;
+
 public class HowToApplyXslToXml {
 
 	@Test
-	public void useMultipleXmlSourcesInOneXsl() {
+	public void useMultipleXmlSourcesInOneXsl2() {
+		InputStream xml = Thread.currentThread().getContextClassLoader().getResourceAsStream("stack54335576/repo.xml");
+		InputStream xsl = Thread.currentThread().getContextClassLoader().getResourceAsStream("stack54335576/join.xsl");
+		String booksXmlPath = "src/test/java/stack54335576/books.xml";
+		String articlesXmlPath = "src/test/java/stack54335576/articles.xml";
+		xslt(xml, new StreamSource(xsl),new Pair<String, String>("bookFile", booksXmlPath),new Pair<String, String>("articleFile", articlesXmlPath));
+	}
+
+	
+	@SafeVarargs
+	public final void xslt(InputStream xml, Source xsl,Pair<String,String>...params) {
+		try {
+			TransformerFactory factory = TransformerFactory.newInstance();
+			Transformer transformer = factory.newTransformer(xsl);
+			Stream.of(params).forEach((p)->transformer.setParameter(p.fst, p.snd) );
+			transformer.transform(new StreamSource(xml), new StreamResult(System.out));
+		} catch (Exception e) {
+			throw new RuntimeException(e);
+		}
+	}
+	
+	@Test
+	public void useMultipleXmlSourcesInOneXsl_OldVersion() {
 		InputStream xml = Thread.currentThread().getContextClassLoader().getResourceAsStream("stack54335576/repo.xml");
 		InputStream xsl = Thread.currentThread().getContextClassLoader().getResourceAsStream("stack54335576/join.xsl");
 		String booksXmlPath = "src/test/java/stack54335576/books.xml";
 		String articlesXmlPath = "src/test/java/stack54335576/articles.xml";
 		Document xslDocument = readXml(xsl);
-		insertFileSourceIntoXsl(xslDocument,"bookFile", booksXmlPath);
-		insertFileSourceIntoXsl(xslDocument,"articleFile", articlesXmlPath);
+		insertFileSourceIntoXsl(xslDocument, "bookFile", booksXmlPath);
+		insertFileSourceIntoXsl(xslDocument, "articleFile", articlesXmlPath);
 		xsl(xml, new DOMSource(xslDocument));
 	}
 
-	private void insertFileSourceIntoXsl(Document xslDocument, String name,String xmlPath) {
+	private void insertFileSourceIntoXsl(Document xslDocument, String name, String xmlPath) {
 		Element param = xslDocument.createElementNS("http://www.w3.org/1999/XSL/Transform", "xsl:param");
 		param.setAttribute("name", name);
-		param.setAttribute("select", "document('"+xmlPath+"')");
+		param.setAttribute("select", "document('" + xmlPath + "')");
 		xslDocument.getFirstChild().appendChild(param);
 	}
 
@@ -75,10 +100,5 @@ public class HowToApplyXslToXml {
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}
-	}
-	
-	@Test
-	public void solution2() {
-		
 	}
 }
